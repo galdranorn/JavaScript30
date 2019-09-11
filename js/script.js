@@ -36,7 +36,6 @@ let importHtmlFiles = function() {
     // for every tab with daily challenge import external file
     for (i=1; i<31; i++) {
         $("#day-"+i).load("pages/day"+i+".html"); 
-        console.log("done");
     }
 }
 
