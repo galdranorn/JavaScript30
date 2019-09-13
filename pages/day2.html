@@ -1,1 +1,31 @@
-2
+<div class="clock">
+    <div class="clock-face">
+        <div class="hand hour-hand"></div>
+        <div class="hand min-hand"></div>
+        <div class="hand second-hand"></div>
+    </div>
+</div>
+
+<script>
+
+    // this code is here because with issue with querySelector (same as in day1)
+
+    const secondHand = document.querySelector('.second-hand');
+    const minHand = document.querySelector('.min-hand');
+    const hourHand = document.querySelector('.hour-hand');
+
+    function rotateHand(value, whole, element) {
+        const degrees = ((value/whole) * 360)+90;
+        element.style.transform=`rotate(${degrees}deg)`;
+    }
+
+    function setDate() {
+        const now = new Date();
+        rotateHand(now.getSeconds(), 60, secondHand);
+        rotateHand(now.getMinutes(), 60, minHand);
+        rotateHand(now.getHours(), 12, hourHand);
+    }
+
+    setInterval(setDate, 1000)
+
+</script>
