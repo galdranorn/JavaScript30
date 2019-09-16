@@ -35,3 +35,19 @@ body { background-color: #ffffff; background-image: url("data:image/svg+xml,%3Cs
 #day-2 .min-hand { background: #006; }
 
 #day-2 .hour-hand { background: black; }
+
+#day-3 { text-align: center; background: #193549; color: white; font-family: 'helvetica neue', sans-serif; font-weight: 100; font-size: 50px; height: calc(100vh - 220px); /* This is defined in html file:
+    :root {
+        --base: #ffc600;
+        --spacing: 10px;
+        --blur: 10px;
+  }
+*/ }
+
+#day-3 .controls { margin-bottom: 50px; }
+
+#day-3 input { width: 100px; display: inline-block; }
+
+#day-3 .text { font-weight: bold; color: var(--base); }
+
+#day-3 img { width: 500px; height: auto; padding: var(--spacing); background: var(--base); filter: blur(var(--blur)); }

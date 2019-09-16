@@ -1,0 +1,40 @@
+#day-3 {
+    text-align: center;
+    background: #193549;
+    color: white;
+    font-family: 'helvetica neue', sans-serif;
+    font-weight: 100;
+    font-size: 50px;
+    height: $pagesHeight;
+
+  .controls {
+    margin-bottom: 50px;
+  }
+
+  input {
+    width: 100px;
+    display: inline-block;
+  }
+
+/* This is defined in html file:
+    :root {
+        --base: #ffc600;
+        --spacing: 10px;
+        --blur: 10px;
+  }
+*/
+
+  .text {
+      font-weight: bold;
+      color: var(--base);
+  }
+
+  img {
+      width: 500px;
+      height: auto;
+      padding: var(--spacing);
+      background: var(--base);
+      filter: blur(var(--blur));
+  }
+
+}
