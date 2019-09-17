@@ -51,3 +51,19 @@ body { background-color: #ffffff; background-image: url("data:image/svg+xml,%3Cs
 #day-3 .text { font-weight: bold; color: var(--base); }
 
 #day-3 img { width: 500px; height: auto; padding: var(--spacing); background: var(--base); filter: blur(var(--blur)); }
+
+#day-4 { background: #111; }
+
+#day-4 .question { margin: 40px 20px; }
+
+#day-4 .header, #day-4 .mainHeader { text-align: center; }
+
+#day-4 .mainHeader { color: violet; }
+
+#day-4 .header { color: darkmagenta; }
+
+#day-4 .exercise { color: greenyellow; font-style: italic; }
+
+#day-4 .answer { color: blue; }
+
+#day-4 .mainHeader, #day-4 .answer span, #day-4 .exercise span { font-weight: bold; }

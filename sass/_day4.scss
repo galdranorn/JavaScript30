@@ -1,0 +1,25 @@
+#day-4 {
+    background: #111;
+    .question {
+        margin: 40px 20px;
+    }
+    .header, .mainHeader {
+        text-align: center;
+    }
+    .mainHeader {
+        color: violet;
+    }
+    .header {
+        color: darkmagenta;
+    }
+    .exercise {
+        color: greenyellow;
+        font-style: italic;
+    }
+    .answer {
+        color: blue;
+    }
+    .mainHeader, .answer span, .exercise span {
+        font-weight: bold;
+    }
+}

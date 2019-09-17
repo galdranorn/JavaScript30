@@ -1,1 +1,132 @@
-4
+<h2 class="mainHeader">Array cardio part 1 💁</h2>
+<div id="exercises"></div>
+
+<script>    
+
+// SOME DATA TO WORK WITH 
+    const inventors = [
+            { first: 'Albert', last: 'Einstein', year: 1879, passed: 1955 },
+            { first: 'Isaac', last: 'Newton', year: 1643, passed: 1727 },
+            { first: 'Galileo', last: 'Galilei', year: 1564, passed: 1642 },
+            { first: 'Marie', last: 'Curie', year: 1867, passed: 1934 },
+            { first: 'Johannes', last: 'Kepler', year: 1571, passed: 1630 },
+            { first: 'Nicolaus', last: 'Copernicus', year: 1473, passed: 1543 },
+            { first: 'Max', last: 'Planck', year: 1858, passed: 1947 },
+            { first: 'Katherine', last: 'Blodgett', year: 1898, passed: 1979 },
+            { first: 'Ada', last: 'Lovelace', year: 1815, passed: 1852 },
+            { first: 'Sarah E.', last: 'Goode', year: 1855, passed: 1905 },
+            { first: 'Lise', last: 'Meitner', year: 1878, passed: 1968 },
+            { first: 'Hanna', last: 'Hammarström', year: 1829, passed: 1909 }
+        ];
+    const people = [
+        'Beck, Glenn', 'Becker, Carl', 'Beckett, Samuel', 'Beddoes, Mick', 'Beecher, Henry', 'Beethoven, Ludwig', 'Begin, Menachem', 'Belloc, Hilaire', 'Bellow, Saul', 'Benchley, Robert', 'Benenson, Peter', 'Ben-Gurion, David', 'Benjamin, Walter', 'Benn, Tony', 'Bennington, Chester', 'Benson, Leana', 'Bent, Silas', 'Bentsen, Lloyd', 'Berger, Ric', 'Bergman, Ingmar', 'Berio, Luciano', 'Berle, Milton', 'Berlin, Irving', 'Berne, Eric', 'Bernhard, Sandra', 'Berra, Yogi', 'Berry, Halle', 'Berry, Wendell', 'Bethea, Erin', 'Bevan, Aneurin', 'Bevel, Ken', 'Biden, Joseph', 'Bierce, Ambrose', 'Biko, Steve', 'Billings, Josh', 'Biondo, Frank', 'Birrell, Augustine', 'Black, Elk', 'Blair, Robert', 'Blair, Tony', 'Blake, William'
+        ];
+    const data = [
+        'car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' 
+        ];
+
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - 
+// - - - - - - - -  EXERCISE ZONE - - - - - - - - - - -
+
+    // FILTER --- 1. Filter the list of inventors for those who were born in the 1500's
+
+        const fifteen = inventors.filter(inventor => (inventor.year >= 1500 && inventor.year<1600));
+        // same as inventors.filter(function(inventor) {if(...) {...}})
+        const answer1 = 'inventors.filter(inventor => (inventor.year >= 1500 && inventor.year<1600))'; 
+
+    // MAP --- 2. Give us an array of the inventors' first and last names
+
+        const fullNames = inventors.map(inventor => `${inventor.first} ${inventor.last}`);
+        const answer2 = 'inventors.map(inventor => `${inventor.first} ${inventor.last}`)';
+
+    // SORT --- 3. Sort the inventors by birthdate, oldest to youngest
+
+        const ordered = inventors.sort((firstPerson, secondPerson) => firstPerson.year > secondPerson.year ? 1 : -1);
+        /*same as:
+        const ordered = inventors.sort(function(firstPerson, secondPerson) {
+            if (firstPerson.year > secondPerson.year) { return 1 } 
+            else { return -1 }
+        });*/
+        const answer3 = 'inventors.sort((firstPerson, secondPerson) => firstPerson.year > secondPerson.year ? 1 : -1)';
+
+    // REDUCE --- 4. How many years did all the inventors live?
+
+        let totalYears = inventors.reduce((total, inventor) => {
+            return total + (inventor.passed-inventor.year);
+        }, 0);
+        const answer4 = 'inventors.reduce((total, inventor) => {return total + (inventor.passed-inventor.year)}, 0)';
+
+    // 5. Sort the inventors by years lived
+        
+        const sorted = inventors.sort((firstPerson, secondPerson) => firstPerson.passed-firstPerson.year<secondPerson.passed-secondPerson.year ? 1 : -1);
+        const answer5 = 'inventors.sort((firstPerson, secondPerson) => firstPerson.passed-firstPerson.year<secondPerson.passed-secondPerson.year ? 1 : -1)';
+
+    // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
+    // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
+
+        const answer6 = 'Array.map(link => link.textContent).filter(streetName.includes(\'de\')';
+
+    // 7. sort Exercise
+    // Sort the people alphabetically by last name
+
+        const alphabetically = people.sort(function(lastOne, nextOne){
+            const [aLast, aFirst] = lastOne.split(', ');
+            const [bLast, bFirst] = nextOne.split(', ');
+            return aLast > bLast ? 1 : -1;
+        });
+        const answer7 = `people.sort(function(lastOne, nextOne){<br>
+            const [aLast, aFirst] = lastOne.split(', ');<br>
+            const [bLast, bFirst] = nextOne.split(', ');<br>
+            return aLast > bLast ? 1 : -1;<br>
+            })`;
+
+    // 8. Reduce Exercise
+    // Sum up the instances of each of these
+
+        const transportation = data.reduce(function(obj, item){
+            if (!obj[item]) { obj[item] = 0; } // creates initial instance of ex. "car: 0"
+            obj[item]++;
+            return obj;
+        }, {});
+        const answer8 = `data.reduce(function(obj, item){<br>
+            if (!obj[item]) { obj[item] = 0; }<br>
+            obj[item]++;<br>
+            return obj;<br>
+        }, {})`;
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+
+ // CREATING THE OUTPUT IN THE LAYOUT
+
+    const methods = ['1. Array.prototype.filter()', '2. Array.prototype.map()', '3. Array.prototype.sort()', '4. Array.prototype.reduce()', '5. Training 1', '6. Training 2', '7. Training 3', '8. Training 4' ];
+    const exercises = [
+        'Filter the list of inventors for those who were born in the 1500\'s',
+        'Give us an array of the inventors\' first and last names',
+        'Sort the inventors by birthdate, oldest to youngest',
+        'How many years did all the inventors live?',
+        'Sort the inventors by years lived',
+        'Create a list of Boulevards in Paris that contain \'de\' anywhere in the name',
+        'Sort the people alphabetically by last name',
+        'Sum up the instances of each of these'
+        ];
+    const answers = [ answer1, answer2, answer3, answer4, answer5, answer6, answer7, answer8 ];
+    let arraysToHtml = '';
+
+    function createPage() {
+        for (let i=0; i<8; i++) {
+            arraysToHtml = arraysToHtml + `
+            <div class="question">
+                <h3 class="header">${methods[i]}</h3>
+                <p class="exercise"><span>Exercise:</span> ${exercises[i]}</p>
+                <p class="answer"><span>Answer:</span> ${answers[i]}</p>
+            </div>`;
+        }
+    }
+
+    createPage();
+    document.querySelector("#exercises").innerHTML=arraysToHtml;   
+
+</script>
