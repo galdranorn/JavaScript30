@@ -67,3 +67,35 @@ body { background-color: #ffffff; background-image: url("data:image/svg+xml,%3Cs
 #day-4 .answer { color: blue; }
 
 #day-4 .mainHeader, #day-4 .answer span, #day-4 .exercise span { font-weight: bold; }
+
+#day-5 { box-sizing: border-box; background: #ffc600; font-family: 'Amatic'; font-size: 20px; font-weight: 200; padding: 0; height: calc(100vh - 220px); }
+
+#day-5 *, #day-5 *:before, #day-5 *:after { box-sizing: inherit; }
+
+#day-5 .panels { min-height: calc(100vh - 220px); overflow: hidden; display: -ms-flexbox; display: flex; }
+
+#day-5 .panels .panel { min-height: calc(100vh - 220px); background: #6B0F9C; box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.1); color: white; text-align: center; -ms-flex-align: center; align-items: center; /* Safari transitionend event.propertyName === flex */ /* Chrome + FF transitionend event.propertyName === flex-grow */ transition: font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), background 0.2s; transition: font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), background 0.2s, -ms-flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11); font-size: 20px; background-size: cover; background-position: center; -ms-flex: 1; flex: 1; -ms-flex-pack: center; justify-content: center; align-items: center; display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; }
+
+#day-5 .panels .panel > * { margin: 0; width: 100%; transition: transform 0.5s; -ms-flex: 1 0 auto; flex: 1 0 auto; display: -ms-flexbox; display: flex; -ms-flex-pack: center; justify-content: center; -ms-flex-align: center; align-items: center; }
+
+#day-5 .panels .panel > *:first-child { transform: translateY(-100%); }
+
+#day-5 .panels .panel > *:last-child { transform: translateY(100%); }
+
+#day-5 .panels .panel.open { font-size: 40px; -ms-flex: 5; flex: 5; }
+
+#day-5 .panels .panel.open-active > *:first-child, #day-5 .panels .panel.open-active > *:last-child { transform: translateY(0); }
+
+#day-5 .panels .panel p { text-transform: uppercase; font-family: 'Amatic SC', cursive; text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45); font-size: 2em; }
+
+#day-5 .panels .panel p:nth-child(2) { font-size: 4em; }
+
+#day-5 .panels .panel1 { background-image: url(https://source.unsplash.com/gYl-UtwNg_I/1500x1500); }
+
+#day-5 .panels .panel2 { background-image: url(https://source.unsplash.com/rFKUFzjPYiQ/1500x1500); }
+
+#day-5 .panels .panel3 { background-image: url(https://images.unsplash.com/photo-1465188162913-8fb5709d6d57?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&w=1500&h=1500&fit=crop&s=967e8a713a4e395260793fc8c802901d); }
+
+#day-5 .panels .panel4 { background-image: url(https://source.unsplash.com/ITjiVXcwVng/1500x1500); }
+
+#day-5 .panels .panel5 { background-image: url(https://source.unsplash.com/3MNzGlQM7qs/1500x1500); }
