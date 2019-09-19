@@ -1,44 +1,54 @@
-// ---- CREATE PROJECT STRUCTURE ---- //
-
-let createNav = () => {
-    // create ul element for tabs
-    let nav = document.createElement("ul");
-    nav.classList.add("nav", "nav-tabs");
-    nav.setAttribute("role","tablist");
-    // create tabs for each day of challenge
-    for (let i=1; i<31; i++){
-        let block = document.createElement("li");
-        block.classList.add("nav-item");
-        block.innerHTML = "<a class='nav-link active' id='day-"+i+"-tab'data-toggle='tab' href='#day-"+i+"' role='tab' aria-controls='day-"+i+"' aria-selected='true'>Day "+i+"</a>";
-        nav.appendChild(block);
-    }
-    // append created ul element to section defined in index.html
-    document.querySelector("#nav").appendChild(nav);
+let renderStructure = (days) => {
+    createNav(days);
+    renderPages(days);
+    importHtmlFiles(days);
 }
 
+let createNav = (days) => {
+    const navigationBox = document.querySelector('#nav');
+    let nav = document.createElement('ul');
+    nav.classList.add('nav', 'nav-tabs');
+    nav.setAttribute('role','tablist');
+    nav.innerHTML = createTabs(days);
+    navigationBox.appendChild(nav);
+}
 
-let renderPages = () => {
-    // create div element where pages will be switched
+let createTabs = (days) => {
+    let tabsHtml = ``;
+    for (let i=1; i<(days+1); i++) {
+        tabsHtml = tabsHtml + `
+            <li class='nav-item'>
+                <a 
+                    class='nav-link active'
+                    data-toggle='tab'   
+                    role='tab'   
+                    aria-selected='true'   
+                    id='day-${i}-tab'   
+                    href='#day-${i}'   
+                    aria-controls='day-${i}'
+                > 
+                    ${i} 
+                </a>
+            </li>`;
+    }
+    return tabsHtml;
+}
+
+let renderPages = (days) => {
+    const pagesBox = document.querySelector("#pages");
     let pages = document.createElement("div");
     pages.classList.add("tab-content");
-    // create div element for each day of challenge
-    for (let i=1; i<31; i++) {
-        let page = document.createElement("div");
-        page.setAttribute("id", "day-"+i);
-        page.classList.add("tab-pane", "fade");
-        page.setAttribute("role", "tabpanel");
-        page.setAttribute("aria-labelledby", "day-"+i+"-tab");
-        pages.appendChild(page);
+    for (let i=1; i<(days+1); i++) {
+        let page = `<div id='day-${i}' class='tab-pane fade' role='tabpanel' aria-labelledby='day-${i}-tab'></div>`;
+        pages.innerHTML+=page;
     }
-    // append each div to section pages defined in index.html
-    document.querySelector("#pages").appendChild(pages);
+    pagesBox.appendChild(pages);
 }
 
-let importHtmlFiles = () => {
-    // for every tab with daily challenge import external file
-    for (let i=1; i<31; i++) {
+let importHtmlFiles = (days) => {
+    for (let i=1; i<(days+1); i++) {
         $("#day-"+i).load("pages/day"+i+".html"); 
     }
 }
 
-export { createNav, renderPages, importHtmlFiles }
+export { renderStructure }
