@@ -1,6 +1,9 @@
 import { renderStructure } from './structure.js';
-import { drumKit } from './day1.js';
+import { playDrums } from './day1.js';
+import { startClock } from './day2.js';
 
 renderStructure(30);
 
-drumKit();
+playDrums();
+startClock();
+
