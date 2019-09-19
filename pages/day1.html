@@ -48,19 +48,3 @@
     <audio data-key="75" src="../sounds/tom.wav"></audio>
     <audio data-key="76" src="../sounds/tink.wav"></audio>
 </section>
-
-<script>
-    
-    // this section is made here not in js file because 
-    // loading html file to make all exercises in one project
-    // is causing problem with querySelectorAll work
-    const challengeTab = document.querySelector("#day-1-tab");
-
-    function removeTransition(e) {
-        this.classList.remove('playing');
-    }
-
-    const keys = document.querySelectorAll('.key');
-    keys.forEach(key => key.addEventListener('transitionend', removeTransition));
-
-</script>
