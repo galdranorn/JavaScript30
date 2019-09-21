@@ -1,4 +1,4 @@
-let startClock = () => {
+let clock = () => {
     window.addEventListener('click', setDate)
     setInterval(setDate, 1000)
 }
@@ -31,4 +31,4 @@ function rotateHand(value, whole, element) {
     element.style.transform=`rotate(${degrees}deg)`;
 }
 
-export { startClock }
+export { clock }

@@ -1,4 +1,4 @@
-let startCssUpdater = () => {
+let cssUpdater = () => {
     window.addEventListener('click', addInputListeners)
 }
 
@@ -13,6 +13,6 @@ function handleInputUpdate() {
     document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
 }
 
-export { startCssUpdater }
+export { cssUpdater }
 
 

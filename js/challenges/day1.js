@@ -1,4 +1,4 @@
-let playDrums = () => window.addEventListener('keydown', playDrum);
+let drumKit = () => window.addEventListener('keydown', playDrum);
 
 let playDrum = (e) => {
     const area = document.querySelector("#day-1");
@@ -23,4 +23,4 @@ let removeTransition = (action) => {
     action.srcElement.classList.remove('playing');
 }
 
-export { playDrums }
+export { drumKit }
