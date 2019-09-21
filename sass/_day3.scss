@@ -16,14 +16,6 @@
     display: inline-block;
   }
 
-/* This is defined in html file:
-    :root {
-        --base: #ffc600;
-        --spacing: 10px;
-        --blur: 10px;
-  }
-*/
-
   .text {
       font-weight: bold;
       color: var(--base);
@@ -36,5 +28,10 @@
       background: var(--base);
       filter: blur(var(--blur));
   }
+}
 
+:root {
+  --base: #ffc600;
+  --spacing: 10px;
+  --blur: 10px;
 }
