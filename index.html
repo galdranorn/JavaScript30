@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,15 +12,23 @@
         <link rel="stylesheet" type="text/css" href="vendor/normalize.css">
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
-    <body>
 
-        <h1 class="global-header">My JavaScript30 adventure</h1>
-        <div id="nav" class="global-nav"></div>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="navbar-brand logo col-4">
+                <a href="#">JavaScript 30</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="toggle nav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            
+            <div id="nav" class="global-nav col-8 collapse navbar-collapse"></div>
+        </nav>
+
         <div id="pages" class="global-pages"></div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
         <script type="module" src="js/script.js"></script>
-        
     </body>
 </html>

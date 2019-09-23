@@ -10,10 +10,35 @@ import { canvas }           from './challenges/day8.js'
 
 renderStructure(30);
 
-drumKit();
-clock();
-cssUpdater();
-arrayCardio1();
-clickablePanels();
-canvas();
-citySearcher();
+const challenges = [
+    drumKit,
+    clock,
+    cssUpdater,
+    arrayCardio1,
+    clickablePanels,
+    citySearcher,
+    function() {console.log('no function')},
+    canvas,
+]
+
+const showPage = (e) => {
+    if(e.target.classList.contains("nav-link")){
+        for (let i=1; i<=challenges.length; i++) {
+            checkClasses(e.target.id, i)
+        }
+    }
+}
+
+const checkClasses = (id, i) => {
+    let page = document.querySelector(`#day-${i}`);
+    if (id==`day-${i}-tab`) {
+        page.classList.remove("invisible")
+        challenges[i-1]();
+        console.log(challenges[i-1])
+    } else { page.classList.add("invisible") }
+}
+
+const navigation = document.querySelector("#nav");
+navigation.addEventListener("click", showPage)
+
+
