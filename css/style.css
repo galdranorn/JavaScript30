@@ -117,3 +117,7 @@ body { background-color: #ffffff; background-image: url("data:image/svg+xml,%3Cs
 #day-6 span.population { font-size: 15px; }
 
 #day-6 .highlighted { background: #ffc600; }
+
+#day-8 { padding: 0; height: calc(100vh - 220px); width: 100%; }
+
+#day-8 section { height: calc(100vh - 220px); }

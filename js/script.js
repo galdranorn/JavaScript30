@@ -5,6 +5,7 @@ import { clock }            from './challenges/day2.js'
 import { cssUpdater }       from './challenges/day3.js'
 import { arrayCardio1 }     from './challenges/day4.js'
 import { clickablePanels }  from './challenges/day5.js'
+import { canvas }           from './challenges/day8.js';
 
 renderStructure(30);
 
@@ -13,3 +14,4 @@ clock();
 cssUpdater();
 arrayCardio1();
 clickablePanels();
+canvas();
