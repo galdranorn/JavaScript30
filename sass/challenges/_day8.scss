@@ -1,9 +1,7 @@
 #day-8 {
     padding: 0;
-    height: $pagesHeight;
-    width: 100%;
+}
 
-    section {
-        height: $pagesHeight;
-    }
+#day-8, #day-8 section, #day-8 canvas {
+    max-height: $pagesHeight;
 }
