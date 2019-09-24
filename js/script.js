@@ -19,6 +19,7 @@ const challenges = [
     citySearcher,
     function() {console.log('no function')},
     canvas,
+    function() {console.log('no function')},
 ]
 
 const showPage = (e) => {
