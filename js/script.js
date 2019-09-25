@@ -7,6 +7,8 @@ import { arrayCardio1 }     from './challenges/day4.js'
 import { clickablePanels }  from './challenges/day5.js'
 import { citySearcher }     from './challenges/day6.js'
 import { canvas }           from './challenges/day8.js'
+import { multiCheckboxes }  from './challenges/day10.js'
+
 
 renderStructure(30);
 
@@ -20,6 +22,7 @@ const challenges = [
     function() {console.log('no function')},
     canvas,
     function() {console.log('no function')},
+    multiCheckboxes,
 ]
 
 const showPage = (e) => {

@@ -129,3 +129,17 @@ nav .global-nav ul li a { color: #fff; padding: 5px; }
 #day-8 { padding: 0; }
 
 #day-8, #day-8 section, #day-8 canvas { max-height: calc(100vh - 70px); }
+
+#day-10 { font-family: sans-serif; background: #ffc600; height: calc(100vh - 70px); padding: 50px; }
+
+#day-10 .inbox { max-width: 400px; margin: 0 auto; background: white; border-radius: 5px; box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.1); }
+
+#day-10 .item { display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; border-bottom: 1px solid #F1F1F1; }
+
+#day-10 .item:last-child { border-bottom: 0; }
+
+#day-10 .item:checked + p { background: #F9F9F9; text-decoration: line-through; }
+
+#day-10 .item [type=checkbox] { margin: 20px; }
+
+#day-10 p { margin: 0; padding: 20px; transition: background 0.2s; -ms-flex: 1; flex: 1; font-family: 'helvetica neue'; font-size: 20px; font-weight: 200; border-left: 1px solid #D1E2FF; }
